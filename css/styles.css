@@ -1,0 +1,141 @@
+/*--------------- Resets ---------------*/
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*--------------- General---------------*/
+:root {
+  /* PRIMARY */
+  --dark-cyan: hsl(185, 75%, 39%);
+  --dark-blue: hsl(229, 23%, 23%);
+
+  /* NEUTRAL*/
+  --dark-grey: hsl(0, 0%, 59%);
+  --grey-opacity: rgb(150, 150, 150, 0.5);
+  --white: hsl(0, 100%, 100%);
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Kumbh Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-image: url(../images/bg-pattern-top.svg),
+    url(../images/bg-pattern-bottom.svg);
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+  background-repeat: no-repeat;
+  background-color: var(--dark-cyan);
+}
+
+.main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card,
+.pattern {
+  max-width: 400px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  background: var(--white);
+  border-radius: 15px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  position: relative;
+}
+
+.pattern {
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+}
+
+/*--------------- Image ---------------*/
+
+.victor-img {
+  width: 8em;
+  border-radius: 50%;
+  border: 5px solid var(--white);
+
+  position: absolute;
+
+  left: 25%;
+  top: 17%;
+}
+
+.transform {
+  transform: translate(25%, 17%);
+}
+/*--------------- Text ---------------*/
+
+.profile-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 0.03em solid var(--grey-opacity);
+  width: 100%;
+  padding-top: 6em;
+}
+
+.name {
+  font-size: 1.125rem;
+  padding-bottom: 0.6em;
+}
+
+.age,
+.city {
+  font-size: 1rem;
+  color: var(--dark-grey);
+  font-weight: 400;
+}
+
+.age {
+  margin-left: 0.2em;
+}
+
+.city {
+  padding-bottom: 2em;
+  font-size: 0.9rem;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 3em;
+  padding: 2em 0;
+}
+
+.stats {
+  font-size: 1.125rem;
+  text-align: center;
+  padding-bottom: 0.2em;
+}
+
+.stats-caption {
+  color: var(--dark-grey);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.03rem;
+  text-align: center;
+}
+
+/*--------------- Footer ---------------*/
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: black;
+}
